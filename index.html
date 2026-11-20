@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fff9fa">
+  <meta name="description" content="Dashboard manajemen usaha bouquet dan handmade Pooly Bloom.">
+  <title>Pooly Bloom | Workshop Manager</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    window.addEventListener('error', function (event) {
+      var message = document.getElementById('boot-message');
+      if (!message) return;
+      if (event.target && event.target.tagName === 'SCRIPT') {
+        message.hidden = false;
+        message.textContent = 'File JavaScript aplikasi tidak termuat. Pastikan assets/app.js sudah diunggah ke GitHub.';
+      } else if (event.error) {
+        message.hidden = false;
+        message.textContent = 'Aplikasi gagal dimulai. Muat ulang halaman atau periksa file assets/app.js.';
+      }
+    }, true);
+  </script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <div id="boot-message" class="boot-message" role="status">Sedang memuat Pooly Bloom…</div>
+  <main id="login-root" class="login-shell" hidden></main>
+  <div id="app-root" hidden></div>
+  <div id="modal-root"></div>
+</body>
+</html>
